@@ -1,0 +1,140 @@
+syntax = "proto3";
+
+package telemetry;
+
+message FullTeleMsg {
+	// Propulsion and Main Air Supply
+
+	// Main mainfold
+	float press_main_1 = 1;
+	float press_main_2 = 2;
+
+	// Propulsion system
+	float press_prop_1 = 51;
+	float press_prop_2 = 52;
+	float press_prop_3 = 53;
+
+	// Tank thermocouples
+	float temp_tank_1 = 101;
+	float temp_tank_2 = 102;
+	float temp_tank_3 = 103;
+
+	// Propulsion valve thermocouple
+	float temp_valve_1 = 151;
+
+	// Nozzle thermocouple
+	float temp_nozzle_1 = 201;
+
+	// Dome regulator thermocouple
+	float temp_dome_1 = 251;
+
+	// Navigation
+
+	// IMU center of mass
+	float kine_com_1 = 301;
+
+	// Stripe counters
+	float ir_counter_1 = 351;
+	float ir_counter_2 = 352;
+	float ir_counter_3 = 353;
+	float ir_counter_4 = 354;
+
+	// Top wheel tachometers
+	float tacho_top_wheels_1 = 401;
+	float tacho_top_wheels_2 = 402;
+
+	// Levitation
+
+	// Skate corner distance sensors
+	float dist_corner_1 = 451;
+	float dist_corner_2 = 452;
+	float dist_corner_3 = 453;
+	float dist_corner_4 = 454;
+
+	// Skate chamber pressure sensors
+	float press_chamber_fl = 501;
+	float press_chamber_fr = 502;
+	float press_chamber_bl = 503;
+	float press_chamber_br = 504;
+	float press_chamber_c = 505;
+
+	// Lev tank thermocouples
+	float temp_lev_1 = 551;
+
+	// Lev tank pressure sensor
+	float press_lev_1 = 601;
+
+	// Skate regulator pressure sensor
+	float press_reg_1 = 651;
+
+	// Brake System
+
+	// LP pressure sensors
+	float press_lp_1 = 701;
+	float press_lp_2 = 702;
+	float press_lp_3 = 703;
+	float press_lp_4 = 704;
+	float press_lp_5 = 705;
+
+	// IMU brakes
+	float kine_brake_front = 751;
+	float kine_brake_back = 752;
+
+	// Brake thermocouples
+	float temp_brake_1 = 801;	
+	float temp_brake_2 = 802;	
+	float temp_brake_3 = 803;	
+	float temp_brake_4 = 804;	
+
+	// Rail temperature sensors
+	float temp_rail_1 = 851;
+	float temp_rail_2 = 852;
+
+	// Brake state switches
+	float prox_brake_1 = 901;
+	float prox_brake_2 = 902;
+	float prox_brake_3 = 903;
+	float prox_brake_4 = 904;
+	float prox_brake_5 = 905;
+	float prox_brake_6 = 906;
+	float prox_brake_7 = 907;
+	float prox_brake_8 = 908;
+	float prox_brake_9 = 909;
+	float prox_brake_10 = 910;
+	float prox_brake_11 = 911;
+	float prox_brake_12 = 912;
+	float prox_brake_13 = 913;
+	float prox_brake_14 = 914;
+	float prox_brake_15 = 915;
+	float prox_brake_16 = 916;
+	float prox_brake_17 = 917;
+	float prox_brake_18 = 918;
+	float prox_brake_19 = 919;
+	float prox_brake_20 = 920;
+	float prox_brake_21 = 921;
+	float prox_brake_22 = 922;
+	float prox_brake_23 = 923;
+	float prox_brake_24 = 924;
+	float prox_brake_25 = 925;
+	float prox_brake_26 = 926;
+	float prox_brake_27 = 927;
+	float prox_brake_28 = 928;
+	float prox_brake_29 = 929;
+	float prox_brake_30 = 930;
+	float prox_brake_31 = 931;
+	float prox_brake_32 = 932;
+
+	// Brakes tank pressure sensor
+	float press_brake_tank_1 = 1001;
+
+	// Other
+
+	// Frame strain sensors
+	float strain_frame_1 = 1051;
+	float strain_frame_2 = 1052;
+	float strain_frame_3 = 1053;
+	float strain_frame_4 = 1054;
+
+	// Tube gas composition sensor
+	float comp_shell_1 = 1101;
+}

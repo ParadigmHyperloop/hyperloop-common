@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package node;
+
+message NodeCommand {
+	bool out0 = 1;
+  bool out1 = 2;
+  bool out2 = 3;
+  bool out3 = 4;
+  bool out4 = 5;
+  bool out5 = 6;
+  bool out6 = 7;
+  bool out7 = 8;
+
+  int dac0 = 9;
+  int dac1 = 10;
+}

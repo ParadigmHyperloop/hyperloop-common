@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package node;
+
+message NodeResponse {
+  message Sensor {
+    bool fault = 1;
+    float value = 2;
+  };
+
+  Sensor a0 = 1;
+  Sensor a1 = 2;
+  Sensor a2 = 3;
+  Sensor a3 = 4;
+  Sensor a4 = 5;
+  Sensor a5 = 6;
+  Sensor a6 = 7;
+  Sensor a7 = 8;
+  Sensor a8 = 9;
+  Sensor a9 = 10;
+  Sensor a10 = 11;
+  Sensor a11 = 12;
+  Sensor a12 = 13;
+  Sensor a13 = 14;
+  Sensor a14 = 15;
+  Sensor a15 = 16;
+}

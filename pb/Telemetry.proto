@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package telemetry;
+
+import "TelemetryFull.proto";
+import "TelemetryLite.proto";
+
+message TelemetryPkg {
+  oneof Payload {
+    LiteTeleMsg lite = 1;
+    FullTeleMsg full = 2;
+  }
+}

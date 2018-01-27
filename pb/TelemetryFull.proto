@@ -1,0 +1,130 @@
+syntax = "proto3";
+
+package telemetry;
+
+message FullTeleMsg {
+  // IMU message
+  message IMU {
+    bool fault = 1;
+    float x = 2;
+    float y = 3;
+    float z = 4;
+    float omega = 5;
+    float phi = 6;
+    float kappa = 7;
+  };
+
+  message Sensor {
+    bool fault = 1;
+    float value = 2;
+  };
+
+  message ControlerState {
+    int32 id = 1;
+    bool is_start = 2;
+    bool is_terminal = 3;
+    bool is_emergency = 4;
+    bool is_safe = 5;
+    int32 duration = 6;
+  };
+
+  int32 timestamp = 1;
+  ControlerState state = 2;
+
+  // Main mainfold
+  Sensor pt_main_1 = 10;
+  Sensor pt_main_2 = 11;
+
+  // Tank thermocouples
+  Sensor tt_main_1 = 21;
+  Sensor tt_main_2 = 22;
+  Sensor tt_main_3 = 23;
+
+  // Propulsion system
+  Sensor pt_prop_pilot = 31;
+  Sensor pt_prop_valve = 32;
+  Sensor pt_prop_nozzle = 33;
+
+  // Dome regulator thermocouple
+  Sensor tt_prop_reg = 41;
+  Sensor tt_prop_valve = 42;
+  Sensor tt_prop_nozzle = 43;
+
+  // Navigation
+  Sensor acceleration = 51;
+  Sensor velocity = 52;
+  Sensor position = 53;
+
+  // IMUs
+  IMU imu_core = 61;
+  IMU imu_brake_front = 62;
+  IMU imu_brake_rear = 63;
+
+  // Stripe counters
+  Sensor counter_1 = 71;
+  Sensor counter_2 = 72;
+  Sensor counter_3 = 73;
+  Sensor counter_4 = 74;
+
+  // Top wheel tachometers
+  Sensor tacho_top_wheels_1 = 81;
+  Sensor tacho_top_wheels_2 = 82;
+
+  // Levitation
+
+  // Skate corner distance sensors
+  Sensor dist_corner_1 = 91;
+  Sensor dist_corner_2 = 92;
+  Sensor dist_corner_3 = 93;
+  Sensor dist_corner_4 = 94;
+
+  // Skate chamber pressure sensors
+  Sensor pt_chamber_fl = 101;
+  Sensor pt_chamber_fr = 102;
+  Sensor pt_chamber_bl = 103;
+  Sensor pt_chamber_br = 104;
+  Sensor pt_chamber_c = 105;
+
+  // Lev tank thermocouples
+  Sensor tt_lev_tank = 111;
+
+  // Lev tank pressure sensor
+  Sensor pt_lev_tank = 121;
+
+  // Skate regulator pressure sensor
+  Sensor pt_lev_reg = 122;
+
+  // Brake System
+
+  // Brake thermocouples
+  Sensor tt_brake_1 = 131;
+  Sensor tt_brake_2 = 132;
+  Sensor tt_brake_3 = 133;
+  Sensor tt_brake_4 = 134;
+
+  // Rail temperature sensors
+  Sensor tt_rail_1 = 141;
+  Sensor tt_rail_2 = 142;
+
+  // Brake state switches
+  bool ls_brake_1 = 151;
+  bool ls_brake_2 = 152;
+  bool ls_brake_3 = 153;
+  bool ls_brake_4 = 154;
+
+  // Brakes tank pressure sensor
+  Sensor pt_brake_tank = 161;
+  Sensor pt_brake_1 = 162;
+  Sensor pt_brake_2 = 163;
+  Sensor pt_brake_3 = 164;
+  Sensor pt_brake_4 = 165;
+
+  // Frame strain sensors
+  Sensor st_frame_1 = 171;
+  Sensor st_frame_2 = 172;
+  Sensor st_frame_3 = 173;
+  Sensor st_frame_4 = 174;
+
+  // Tube gas composition sensor
+  Sensor comp_shell_1 = 181;
+}

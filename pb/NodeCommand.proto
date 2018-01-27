@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package node;
+
+// Milestone: MVP
+// Purpose: Flight Computer -> Node Command Packet
+message NodeCommand {
+  // For controlling DACs
+  message DACSetpoint {
+    enum DACMode {
+      VOLTAGE = 0;
+      CURRENT = 1;
+    }
+
+    DACMode mode = 1;
+    int32 setpoint = 2;
+  }
+
+  // 8 different ON/OFF outputs
+  bool out0 = 1;
+  bool out1 = 2;
+  bool out2 = 3;
+  bool out3 = 4;
+  bool out4 = 5;
+  bool out5 = 6;
+  bool out6 = 7;
+  bool out7 = 8;
+
+  // 2 different Digital->Analog Converter outputs.
+  DACSetpoint dac0 = 9;
+  DACSetpoint dac1 = 10;
+}

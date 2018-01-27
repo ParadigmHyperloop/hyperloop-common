@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package telemetry;
 
-import "fullTele.proto";
-import "liteTele.proto";
+import "TelemetryFull.proto";
+import "TelemetryLite.proto";
 
 message TelemetryPkg {
 	oneof Payload {

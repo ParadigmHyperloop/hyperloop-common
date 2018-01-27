@@ -3,20 +3,20 @@ syntax = "proto3";
 package node;
 
 message NodeResponse {
-	float a0 = 1;
-	float a1 = 2;
-	float a2 = 3;
-	float a3 = 4;
-	float a4 = 5;
-	float a5 = 6;
-	float a6 = 7;
-	float a7 = 8;
-	float a8 = 9;
-	float a9 = 10;
-	float a10 = 11;
-	float a11 = 12;
-	float a12 = 13;
-	float a13 = 14;
-	float a14 = 15;
-	float a15 = 16;
+  float a0 = 1;
+  float a1 = 2;
+  float a2 = 3;
+  float a3 = 4;
+  float a4 = 5;
+  float a5 = 6;
+  float a6 = 7;
+  float a7 = 8;
+  float a8 = 9;
+  float a9 = 10;
+  float a10 = 11;
+  float a11 = 12;
+  float a12 = 13;
+  float a13 = 14;
+  float a14 = 15;
+  float a15 = 16;
 }

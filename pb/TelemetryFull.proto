@@ -32,111 +32,99 @@ message FullTeleMsg {
   ControlerState state = 2;
 
   // Main mainfold
-  Sensor press_main_1 = 10;
-  Sensor press_main_2 = 11;
-
-  // Propulsion system
-  Sensor press_prop_1 = 51;
-  Sensor press_prop_2 = 52;
-  Sensor press_prop_3 = 53;
+  Sensor pt_main_1 = 10;
+  Sensor pt_main_2 = 11;
 
   // Tank thermocouples
-  Sensor temp_tank_1 = 101;
-  Sensor temp_tank_2 = 102;
-  Sensor temp_tank_3 = 103;
+  Sensor tt_main_1 = 21;
+  Sensor tt_main_2 = 22;
+  Sensor tt_main_3 = 23;
 
-  // Propulsion valve thermocouple
-  Sensor temp_valve_1 = 151;
-
-  // Nozzle thermocouple
-  Sensor temp_nozzle_1 = 201;
+  // Propulsion system
+  Sensor pt_prop_pilot = 31;
+  Sensor pt_prop_valve = 32;
+  Sensor pt_prop_nozzle = 33;
 
   // Dome regulator thermocouple
-  Sensor temp_dome_1 = 251;
+  Sensor tt_prop_reg = 41;
+  Sensor tt_prop_valve = 42;
+  Sensor tt_prop_nozzle = 43;
 
   // Navigation
+  Sensor acceleration = 51;
+  Sensor velocity = 52;
+  Sensor position = 53;
 
-  Sensor velocity = 281;
-  Sensor position = 282;
-
-  // IMU center of mass
-  IMU kine_com_1 = 301;
+  // IMUs
+  IMU imu_core = 61;
+  IMU imu_brake_front = 62;
+  IMU imu_brake_rear = 63;
 
   // Stripe counters
-  Sensor ir_counter_1 = 351;
-  Sensor ir_counter_2 = 352;
-  Sensor ir_counter_3 = 353;
-  Sensor ir_counter_4 = 354;
+  Sensor counter_1 = 71;
+  Sensor counter_2 = 72;
+  Sensor counter_3 = 73;
+  Sensor counter_4 = 74;
 
   // Top wheel tachometers
-  Sensor tacho_top_wheels_1 = 401;
-  Sensor tacho_top_wheels_2 = 402;
+  Sensor tacho_top_wheels_1 = 81;
+  Sensor tacho_top_wheels_2 = 82;
 
   // Levitation
 
   // Skate corner distance sensors
-  Sensor dist_corner_1 = 451;
-  Sensor dist_corner_2 = 452;
-  Sensor dist_corner_3 = 453;
-  Sensor dist_corner_4 = 454;
+  Sensor dist_corner_1 = 91;
+  Sensor dist_corner_2 = 92;
+  Sensor dist_corner_3 = 93;
+  Sensor dist_corner_4 = 94;
 
   // Skate chamber pressure sensors
-  Sensor press_chamber_fl = 501;
-  Sensor press_chamber_fr = 502;
-  Sensor press_chamber_bl = 503;
-  Sensor press_chamber_br = 504;
-  Sensor press_chamber_c = 505;
+  Sensor pt_chamber_fl = 101;
+  Sensor pt_chamber_fr = 102;
+  Sensor pt_chamber_bl = 103;
+  Sensor pt_chamber_br = 104;
+  Sensor pt_chamber_c = 105;
 
   // Lev tank thermocouples
-  Sensor temp_lev_1 = 551;
+  Sensor tt_lev_tank = 111;
 
   // Lev tank pressure sensor
-  Sensor press_lev_1 = 601;
+  Sensor pt_lev_tank = 121;
 
   // Skate regulator pressure sensor
-  Sensor press_reg_1 = 651;
+  Sensor pt_lev_reg = 122;
 
   // Brake System
 
-  // LP pressure sensors
-  Sensor press_lp_1 = 701;
-  Sensor press_lp_2 = 702;
-  Sensor press_lp_3 = 703;
-  Sensor press_lp_4 = 704;
-  Sensor press_lp_5 = 705;
-
-  // IMU brakes
-
-  IMU kine_brake_front = 751;
-  IMU kine_brake_back = 752;
-
   // Brake thermocouples
-  Sensor temp_brake_1 = 801;
-  Sensor temp_brake_2 = 802;
-  Sensor temp_brake_3 = 803;
-  Sensor temp_brake_4 = 804;
+  Sensor tt_brake_1 = 131;
+  Sensor tt_brake_2 = 132;
+  Sensor tt_brake_3 = 133;
+  Sensor tt_brake_4 = 134;
 
   // Rail temperature sensors
-  Sensor temp_rail_1 = 851;
-  Sensor temp_rail_2 = 852;
+  Sensor tt_rail_1 = 141;
+  Sensor tt_rail_2 = 142;
 
   // Brake state switches
-  bool brake_module_1 = 901;
-  bool brake_module_2 = 902;
-  bool brake_module_3 = 903;
-  bool brake_module_4 = 904;
+  bool ls_brake_1 = 151;
+  bool ls_brake_2 = 152;
+  bool ls_brake_3 = 153;
+  bool ls_brake_4 = 154;
 
   // Brakes tank pressure sensor
-  Sensor press_brake_tank_1 = 1001;
-
-  // Other
+  Sensor pt_brake_tank = 161;
+  Sensor pt_brake_1 = 162;
+  Sensor pt_brake_2 = 163;
+  Sensor pt_brake_3 = 164;
+  Sensor pt_brake_4 = 165;
 
   // Frame strain sensors
-  Sensor strain_frame_1 = 1051;
-  Sensor strain_frame_2 = 1052;
-  Sensor strain_frame_3 = 1053;
-  Sensor strain_frame_4 = 1054;
+  Sensor st_frame_1 = 171;
+  Sensor st_frame_2 = 172;
+  Sensor st_frame_3 = 173;
+  Sensor st_frame_4 = 174;
 
   // Tube gas composition sensor
-  Sensor comp_shell_1 = 1101;
+  Sensor comp_shell_1 = 181;
 }

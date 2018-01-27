@@ -3,5 +3,5 @@ syntax = "proto3";
 package telemetry;
 
 message LiteTeleMsg {
- // For critical, highly updated sensors
+  // For critical, highly updated sensors
 }

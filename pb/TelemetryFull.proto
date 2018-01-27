@@ -3,124 +3,124 @@ syntax = "proto3";
 package telemetry;
 
 message FullTeleMsg {
-	// IMU message
-	message IMU {
-		float x = 1;
-		float y = 2;
-		float z = 3;
-		float omega = 4;
-		float phi = 5;
-		float kappa = 6;
-	}
+  // IMU message
+  message IMU {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float omega = 4;
+    float phi = 5;
+    float kappa = 6;
+  }
 
-	// Propulsion and Main Air Supply
+  // Propulsion and Main Air Supply
 
-	// Main mainfold
-	float press_main_1 = 1;
-	float press_main_2 = 2;
+  // Main mainfold
+  float press_main_1 = 1;
+  float press_main_2 = 2;
 
-	// Propulsion system
-	float press_prop_1 = 51;
-	float press_prop_2 = 52;
-	float press_prop_3 = 53;
+  // Propulsion system
+  float press_prop_1 = 51;
+  float press_prop_2 = 52;
+  float press_prop_3 = 53;
 
-	// Tank thermocouples
-	float temp_tank_1 = 101;
-	float temp_tank_2 = 102;
-	float temp_tank_3 = 103;
+  // Tank thermocouples
+  float temp_tank_1 = 101;
+  float temp_tank_2 = 102;
+  float temp_tank_3 = 103;
 
-	// Propulsion valve thermocouple
-	float temp_valve_1 = 151;
+  // Propulsion valve thermocouple
+  float temp_valve_1 = 151;
 
-	// Nozzle thermocouple
-	float temp_nozzle_1 = 201;
+  // Nozzle thermocouple
+  float temp_nozzle_1 = 201;
 
-	// Dome regulator thermocouple
-	float temp_dome_1 = 251;
+  // Dome regulator thermocouple
+  float temp_dome_1 = 251;
 
-	// Navigation
+  // Navigation
 
-	float velocity = 281;
-	float position = 282;
+  float velocity = 281;
+  float position = 282;
 
-	// IMU center of mass
-	IMU kine_com_1 = 301;
+  // IMU center of mass
+  IMU kine_com_1 = 301;
 
-	// Stripe counters
-	float ir_counter_1 = 351;
-	float ir_counter_2 = 352;
-	float ir_counter_3 = 353;
-	float ir_counter_4 = 354;
+  // Stripe counters
+  float ir_counter_1 = 351;
+  float ir_counter_2 = 352;
+  float ir_counter_3 = 353;
+  float ir_counter_4 = 354;
 
-	// Top wheel tachometers
-	float tacho_top_wheels_1 = 401;
-	float tacho_top_wheels_2 = 402;
+  // Top wheel tachometers
+  float tacho_top_wheels_1 = 401;
+  float tacho_top_wheels_2 = 402;
 
-	// Levitation
+  // Levitation
 
-	// Skate corner distance sensors
-	float dist_corner_1 = 451;
-	float dist_corner_2 = 452;
-	float dist_corner_3 = 453;
-	float dist_corner_4 = 454;
+  // Skate corner distance sensors
+  float dist_corner_1 = 451;
+  float dist_corner_2 = 452;
+  float dist_corner_3 = 453;
+  float dist_corner_4 = 454;
 
-	// Skate chamber pressure sensors
-	float press_chamber_fl = 501;
-	float press_chamber_fr = 502;
-	float press_chamber_bl = 503;
-	float press_chamber_br = 504;
-	float press_chamber_c = 505;
+  // Skate chamber pressure sensors
+  float press_chamber_fl = 501;
+  float press_chamber_fr = 502;
+  float press_chamber_bl = 503;
+  float press_chamber_br = 504;
+  float press_chamber_c = 505;
 
-	// Lev tank thermocouples
-	float temp_lev_1 = 551;
+  // Lev tank thermocouples
+  float temp_lev_1 = 551;
 
-	// Lev tank pressure sensor
-	float press_lev_1 = 601;
+  // Lev tank pressure sensor
+  float press_lev_1 = 601;
 
-	// Skate regulator pressure sensor
-	float press_reg_1 = 651;
+  // Skate regulator pressure sensor
+  float press_reg_1 = 651;
 
-	// Brake System
+  // Brake System
 
-	// LP pressure sensors
-	float press_lp_1 = 701;
-	float press_lp_2 = 702;
-	float press_lp_3 = 703;
-	float press_lp_4 = 704;
-	float press_lp_5 = 705;
+  // LP pressure sensors
+  float press_lp_1 = 701;
+  float press_lp_2 = 702;
+  float press_lp_3 = 703;
+  float press_lp_4 = 704;
+  float press_lp_5 = 705;
 
-	// IMU brakes
-	
-	IMU kine_brake_front = 751;
-	IMU kine_brake_back = 752;
+  // IMU brakes
 
-	// Brake thermocouples
-	float temp_brake_1 = 801;	
-	float temp_brake_2 = 802;	
-	float temp_brake_3 = 803;	
-	float temp_brake_4 = 804;	
+  IMU kine_brake_front = 751;
+  IMU kine_brake_back = 752;
 
-	// Rail temperature sensors
-	float temp_rail_1 = 851;
-	float temp_rail_2 = 852;
+  // Brake thermocouples
+  float temp_brake_1 = 801;
+  float temp_brake_2 = 802;
+  float temp_brake_3 = 803;
+  float temp_brake_4 = 804;
 
-	// Brake state switches
-	bool brake_module_1 = 901;
-	bool brake_module_2 = 902;
-	bool brake_module_3 = 903;
-	bool brake_module_4 = 904;
+  // Rail temperature sensors
+  float temp_rail_1 = 851;
+  float temp_rail_2 = 852;
 
-	// Brakes tank pressure sensor
-	float press_brake_tank_1 = 1001;
+  // Brake state switches
+  bool brake_module_1 = 901;
+  bool brake_module_2 = 902;
+  bool brake_module_3 = 903;
+  bool brake_module_4 = 904;
 
-	// Other
+  // Brakes tank pressure sensor
+  float press_brake_tank_1 = 1001;
 
-	// Frame strain sensors
-	float strain_frame_1 = 1051;
-	float strain_frame_2 = 1052;
-	float strain_frame_3 = 1053;
-	float strain_frame_4 = 1054;
+  // Other
 
-	// Tube gas composition sensor
-	float comp_shell_1 = 1101;
+  // Frame strain sensors
+  float strain_frame_1 = 1051;
+  float strain_frame_2 = 1052;
+  float strain_frame_3 = 1053;
+  float strain_frame_4 = 1054;
+
+  // Tube gas composition sensor
+  float comp_shell_1 = 1101;
 }
